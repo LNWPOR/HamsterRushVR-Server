@@ -1,0 +1,33 @@
+{
+  "name": "node-server-starter",
+  "version": "1.0.0",
+  "description": "Starter project for node server",
+  "scripts": {
+    "dev": "nodemon --exec babel-node src/server/server.js",
+    "prestart": "babel src --out-dir dist --copy-files",
+    "start": "node dist/server/server.js"
+  },
+  "author": "Teerapat Chaupetch <tclnwpor@gmail.com>",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "compression": "1.6.2",
+    "cookie-parser": "^1.4.3",
+    "cors": "2.8.1",
+    "express": "^4.14.1",
+    "mongoose": "^4.8.1",
+    "morgan": "^1.8.0",
+    "passport": "^0.2.2",
+    "passport-facebook": "^2.1.1",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^1.3.0",
+    "serve-favicon": "^2.3.2",
+    "socket.io": "^1.7.2"
+  },
+  "engines": {
+    "node": "7.5.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-preset-es2015": "^6.22.0"
+  }
+}
