@@ -24,12 +24,18 @@ export const add = (req,res) => {
         if (err) {
           return res.send(err);
         }
-        //Sign in success.
-        return res.send("1");
+        var dataSent = {
+          status:1,
+          player:player
+        }
+        res.json(dataSent);
       });
-    }else{
-      //Already have Player with this name. Please use other name.
-      return res.send("0");
+    }else if(player){
+      var dataSent = {
+        status:1,
+        player:player
+      }
+      res.json(dataSent);
     }
   });
 }
