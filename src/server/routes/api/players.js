@@ -6,6 +6,7 @@ players.route('/')
   .get(playerController.getAll)
   .post(playerController.add);
 players.route('/:id')
+  .put(playerController.addScoreSeed)
   .get(playerController.getById)
   .put(playerController.edit)
   .delete(playerController.remove);
