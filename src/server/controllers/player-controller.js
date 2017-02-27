@@ -4,7 +4,11 @@ export const getAll = (req,res) => {
   Player.find((err, players ) => {
     if (err)
         res.send(err)
-    res.json(players);
+    var dataSent = {
+      status:1,
+      players:players
+    }
+    res.json(dataSent);
   });
 }
 
