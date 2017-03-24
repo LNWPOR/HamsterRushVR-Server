@@ -14,8 +14,14 @@ export const getAll = (req,res) => {
 
 export const getById = (req,res) => {
   Player.findOne({ _id: req.params.id }, (err, player) => {
-    if (err) return console.error(err);
-      res.json(player);
+    if (err) {
+      return console.error(err);
+    }
+    var dataSent = {
+      status:1,
+      players:players
+    }
+    res.json(dataSent);
   });
 }
 
@@ -46,7 +52,7 @@ export const add = (req,res) => {
 export const addScoreSeed = (req,res) => {
   Player.findOne({ _id:req.params.id }, (err, player) => {
     if(player){
-      console.log(player);
+      //console.log(player);
       if(req.body.scores > player.scores){
         player.scores = req.body.scores;
         player.save((err) => {
@@ -67,6 +73,7 @@ export const addScoreSeed = (req,res) => {
         status:1
       }
       res.json(dataSent);
+
     }else {
       return res.send(err);
     }
@@ -86,6 +93,10 @@ export const edit = (req,res) => {
       if (err) {
         return res.send(err);
       }
+      var dataSent = {
+        status:1
+      }
+      res.json(dataSent);
     });
   });
 }
@@ -95,5 +106,9 @@ export const remove = (req,res) => {
     if (err) {
       return res.send(err);
     }
+    var dataSent = {
+      status:1
+    }
+    res.json(dataSent);
   });
 }
