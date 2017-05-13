@@ -8,7 +8,7 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 * Node.js version 6.10.0
-* MongoDB Database with the database name "hamsterrushvr" in your local machine.
+* MongoDB Database with the database name "hamsterrushvr" in your local machine.Or you can edit the database url in src\server\config\database.js file.
 
 ## Running
 ```
