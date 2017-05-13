@@ -12,8 +12,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 ## Running
 ```
-1. open your database : mongod
-2. open server in new terminal
+1. Open your database : mongod
+2. Open server in new terminal
     npm install
     Dev : npm run dev
     Build : npm run prestart
